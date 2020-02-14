@@ -14,7 +14,7 @@ const Lesson = () => {
   return (
     <div>
       <ResponsivePlayer
-        url= {videoUrl}
+        url= {'https://www.youtube.com/watch?v=v3y8AIEX_dU'}
         onProgress={handleWatchComplete}
       />
       <div>

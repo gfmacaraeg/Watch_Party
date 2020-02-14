@@ -1,0 +1,13 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "just trying to understand React.",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "react": "15.5.3",
+    "react-dom": "15.5.3",
+    "react-measure": "2.0.2",
+    "styled-components": "2.1.2"
+  }
+}
