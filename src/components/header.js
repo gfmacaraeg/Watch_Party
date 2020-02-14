@@ -1,4 +1,4 @@
-
+import { Link} from "react-router-dom"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -17,16 +17,9 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <a 
-          href="#"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link to="/" style={{color: `white`, textDecoration: 'none'}}>
           {siteTitle}
-          <i className = "fa fa-camera"></i>
-        </a>
+        </Link>
       </h1>
     </div>
   </header>
