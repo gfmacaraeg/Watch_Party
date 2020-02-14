@@ -3,6 +3,9 @@ import './App.css';
 import ReactPlayer from "react-player";
 import {  Link } from 'react-router-dom'
 import Layout from '../components/layout'
+import Cards from '../components/cards/App'
+import Header from '../components/header'
+
 class Dash extends React.Component{
 
   constructor(props){
@@ -33,24 +36,28 @@ class Dash extends React.Component{
   render(){
     return (
       <div>
-        <Layout>
-      <div className="App">
+          <Header siteTitle="Youtube Watch Party" />
+      <div  style={{height:"60px"}}>
         
-        <header className="App-header">
-        
-          <div>
-              <form onSubmit={this.handleSubmit}>
-                <input onChange={this.handleChange} style={{margin:"20px"}} className="form-control" type="text" placeholder="Input the video url" />
-                <button style={{margin:"20px"}} className="btn btn-primary">PLAY VIDEO</button>
+        <header className="video-link">
+         {/* <input  className="search " type="text" placeholder="Search.."/><button style={{margin:"20px"}} className="btn btn-primary">Watch</button> */}
+          <div style={{ minWidth: "60%",}}>
+              <form className = "form-inline" onSubmit={this.handleSubmit} >
+             
+                <input onChange={this.handleChange} style={{margin:"20px", minWidth: "40%",}} className="form-cotrol" type="text" placeholder="Input the video url" />
+                <button style={{margin:"20px"}} className="btn btn-primary">Watch</button>
+                <Link to="/watch">Watch</Link>
               </form>
-              <Link to="/watch">Watch</Link>
+              
           </div>
-          <ReactPlayer url={this.state.url} controls={true} />
+          
+          {/* <ReactPlayer url={this.state.url} controls={true} /> */}
         </header>
         
         
       </div>
-      </Layout>
+      
+      <Cards/>
       </div>
     );
   }
