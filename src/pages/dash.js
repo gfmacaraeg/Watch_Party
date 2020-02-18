@@ -5,6 +5,8 @@ import {  Link } from 'react-router-dom'
 import Layout from '../components/layout'
 import Cards from '../components/cards/App'
 import Header from '../components/header'
+import  {createStore} from 'redux'
+
 
 class Dash extends React.Component{
 
