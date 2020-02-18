@@ -4,8 +4,8 @@ import React from "react"
 // import SEO from "./seo"
 import Lesson from "./lesson/Lesson"
 
-const Player = () => (
-    <Lesson />
+const Player = (props) => (
+    <Lesson vidUrl = {props.vidUrl} />
 )
 
 export default Player

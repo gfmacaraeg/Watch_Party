@@ -24,12 +24,15 @@ class Dash extends React.Component{
   }
   
   handleChange = (event)=>{
-    this.setState({inputValue : event.target.value})
+    this.setState({
+      url : event.target.value
+      // url: event.target.value
+    })
   }
 
   handleSubmit = (event) =>{
     event.preventDefault();
-    this.setState({url: this.state.inputValue})
+    // this.setState({url: this.state.inputValue})
   }
 
 
@@ -37,16 +40,23 @@ class Dash extends React.Component{
     return (
       <div>
           <Header siteTitle="Youtube Watch Party" />
-      <div  style={{height:"60px"}}>
+      <div  style={{height:"100px"}}>
         
         <header className="video-link">
          {/* <input  className="search " type="text" placeholder="Search.."/><button style={{margin:"20px"}} className="btn btn-primary">Watch</button> */}
           <div style={{ minWidth: "60%",}}>
+              <p>https://www.youtube.com/watch?v=v3y8AIEX_dU</p>
               <form className = "form-inline" onSubmit={this.handleSubmit} >
              
                 <input onChange={this.handleChange} style={{margin:"20px", minWidth: "40%",}} className="form-cotrol" type="text" placeholder="Input the video url" />
-                <button style={{margin:"20px"}} className="btn btn-primary">Watch</button>
-                <Link to="/watch">Watch</Link>
+                
+                {/* <Link to="/watch">Watch</Link> */}
+                <Link to={{
+                  pathname: '/watch',
+                  vid: {
+                    url: this.state.url
+                  }
+                }}><button style={{margin:"20px"}} className="btn btn-primary">Watch</button></Link>
               </form>
               
           </div>

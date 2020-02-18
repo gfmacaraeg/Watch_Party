@@ -14,19 +14,19 @@ class Watch extends React.Component{
     super(props);
     // var [watchComplete, setWatchComplete] = useState(false)
     this.state = {
-      inputValue : "",
-      url:""
+      url:props.location.vid
     }
+    console.log("This is the state from watch.js", props.location.vid)
   }
   
-  handleChange = (event)=>{
-    this.setState({inputValue : event.target.value})
-  }
+  // handleChange = (event)=>{
+  //   this.setState({inputValue : event.target.value})
+  // }
 
-  handleSubmit = (event) =>{
-    event.preventDefault();
-    this.setState({url: this.state.inputValue})
-  }
+  // handleSubmit = (event) =>{
+  //   event.preventDefault();
+  //   this.setState({url: this.state.inputValue})
+  // }
   // handleWatchComplete = ({ played }) => {
   //   if (played >= 0.7 && !watchComplete) {
   //     setWatchComplete(true)
@@ -38,7 +38,7 @@ class Watch extends React.Component{
       <div style={{backgroundColor: "#282c34"}}>
           <Layout>
             {/* <Route to="/home" component={App}></Route> */}
-            <Player/>
+            <Player vidUrl = {this.state.url}/>
             <ChatApp/>
         </Layout>
         {/* <div

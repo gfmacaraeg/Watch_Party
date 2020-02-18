@@ -4,7 +4,7 @@ export default function Card(props) {
   return (
     <div
       style={{
-        "background-image": `url(${props.imgUrl})`
+        "backgroundImage": `url(${props.imgUrl})`
       }}
       className="card"
     >

@@ -2,9 +2,11 @@ import React, { useState } from "react"
 import "./lesson.css"
 import ResponsivePlayer from "../video/ResponsivePlayer"
 
-const Lesson = () => {
+const Lesson = (props) => {
   const [watchComplete, setWatchComplete] = useState(false)
-  const VideoUrl = "https://www.youtube.com/watch?v=v3y8AIEX_dU"
+  // const VideoUrl = "https://www.youtube.com/watch?v=v3y8AIEX_dU"
+  const videoUrl = props.vidUrl.url
+  console.log(videoUrl.url)
   const handleWatchComplete = ({ played }) => {
     if (played >= 0.7 && !watchComplete) {
       setWatchComplete(true)
@@ -14,8 +16,10 @@ const Lesson = () => {
   return (
     <div>
       <ResponsivePlayer
-        url= {'https://www.youtube.com/watch?v=v3y8AIEX_dU'}
+        // url= {'https://www.youtube.com/watch?v=v3y8AIEX_dU'}
+        url= {videoUrl}
         onProgress={handleWatchComplete}
+        
       />
       <div>
       </div>
