@@ -30,6 +30,4 @@ const ChatApp = () => (
   </ChatContainer>
 );
 
-// render(<ChatApp /> );
-
 export default ChatApp
