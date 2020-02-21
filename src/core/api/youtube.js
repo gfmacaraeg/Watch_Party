@@ -28,7 +28,7 @@ export const youtubeApi = {
 			'q': query,
 			'part': 'snippet',
 			'type': 'video',
-			'maxResults': 50
+			'maxResults': 15
 		} )
 
 		return fetch ( `${YOUTUBE_SEARCH_URL}?${params}`, options )
