@@ -33,7 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
-# node_modules/
+node_modules/
 jspm_packages/
 # build/
 
@@ -68,9 +68,9 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# /node_modules
-# */node_modules
-# */node_modules/*
+/node_modules
+*/node_modules
+*/node_modules/*
 
 # testing
 /coverage
