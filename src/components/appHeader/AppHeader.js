@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Assets
-import logo from '../../assets/logo_white.svg'
+// import logo from '../../assets/logo_white.svg'
 
 // CSS
 import './AppHeader.css'
@@ -84,4 +84,5 @@ export default class AppHeader extends Component {
 			</div>
 		)
 	}
+	
 }
